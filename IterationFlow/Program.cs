@@ -14,7 +14,21 @@ namespace IterationFlow
                     counter++;
                 }
             }
-            Console.WriteLine(string.Format("Numbers that are divisible by 3 are : {0}", counter));
+            //Console.WriteLine(string.Format("Numbers that are divisible by 3 are : {0}", counter));
+
+            //2 - Write a program and continuously ask the user to enter a number or "ok" to exit. 
+            //Calculate the sum of all the previously entered numbers and display it on the console.
+            var sum = 0;
+            while(true){
+                Console.WriteLine("Enter a number or \"ok\" to exit");
+                var input = Console.ReadLine().ToLower();
+                if (input.Equals("ok"))
+                {
+                    break;
+                }
+                sum += Convert.ToInt32(input);
+            }
+            Console.WriteLine(string.Format("The total sum : {0}",sum));
         }
     }
 }
